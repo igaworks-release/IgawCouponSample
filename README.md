@@ -22,3 +22,11 @@
   * [2단계] 리워드 지급 콜백 서버 설정 메뉴에서 정보 등록
 1. 실행
 1. 운영 > 쿠폰 > 쿠폰생성 메뉴에서 쿠폰생성
+
+# Igaworks Coupon 연동하기
+연동 가이드와 샘플 프로젝트를 참고하여 연동을 진행합니다. </br>
+<a href="http://help.igaworks.com/hc/ko/3_3/Content/Article/coupon_aos" target="_blank">Igaworks Coupon 연동문서 바로가기</a>
+
+애드팝콘 오퍼월 서비스는 리워드 지급 처리가 필요합니다.</br> 
+리워드 연동은 다음문서를 참고하여 진행합니다.</br>
+<a href="http://help.igaworks.com/hc/ko/3_3/Content/Article/adpopcorn_offerwall_client_reward_aos" target="_blank">Rward Server 연동문서 바로가기</a>
