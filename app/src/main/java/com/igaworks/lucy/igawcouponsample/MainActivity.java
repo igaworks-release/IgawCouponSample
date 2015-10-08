@@ -11,6 +11,7 @@ import android.view.View;
 import com.igaworks.IgawCommon;
 import com.igaworks.coupon.IgawCoupon;
 import com.igaworks.coupon.interfaces.CouponCallbackListener;
+import com.igaworks.coupon.model.ValidationResultModel;
 
 
 public class MainActivity extends ActionBarActivity {
@@ -57,11 +58,16 @@ public class MainActivity extends ActionBarActivity {
     public void showCouponDialog(View view){
         Log.d(tag, "showCouponDialog ::: Button Click");
 
-        // Igaworks Coupon
+
         IgawCoupon.showCouponDialog(MainActivity.this, false, new CouponCallbackListener() {
             @Override
-            public void run(Dialog dialog, boolean result, String msg) {
-                Log.d(tag, "showCouponDialog ::: " + result + ", "+ msg);
+            public void run(Dialog dialog, ValidationResultModel CouponResult) {
+
+                Log.d(tag, "showCouponDialog.Result ::: " + CouponResult.getResult());
+                Log.d(tag, "showCouponDialog.Message ::: " + CouponResult.getMessage());
+                Log.d(tag, "showCouponDialog.ItemKey ::: " + CouponResult.getItemKey());
+                Log.d(tag, "showCouponDialog.ItemName ::: " + CouponResult.getItemName());
+                Log.d(tag, "showCouponDialog.Quantity ::: " + CouponResult.getQuantity());
 
                 /*
                  * Your Code
@@ -70,6 +76,7 @@ public class MainActivity extends ActionBarActivity {
         });
 
     }
+
 
     @Override
     protected void onResume() {
